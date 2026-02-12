@@ -1,0 +1,18 @@
+.outer-box{
+    visibility:hidden;
+    margin-left:27%;
+    margin-right:27%;
+    border: solid black 2px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap:10px;
+    width:500px;    
+}
+.box{
+    border: solid red 1px;
+    margin:5px;
+    flex:0 0 calc(20% - 10px);
+    aspect-ratio: 1 / 1; 
+}
