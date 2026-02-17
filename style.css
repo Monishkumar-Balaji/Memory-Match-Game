@@ -1,18 +1,79 @@
-.outer-box{
-    visibility:hidden;
-    margin-left:27%;
-    margin-right:27%;
-    border: solid black 2px;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap:10px;
-    width:500px;    
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:center;
+    background: linear-gradient(135deg,#ff9a9e,#fad0c4,#fad0c4);
+    min-height:100vh;
 }
-.box{
-    border: solid red 1px;
-    margin:5px;
-    flex:0 0 calc(20% - 10px);
-    aspect-ratio: 1 / 1; 
+
+/* title */
+h2{
+    color:#ffffff;
+    text-shadow:0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* board container */
+.board{
+    width:520px;
+    margin:25px auto;
+    padding:15px;
+    border-radius:18px;
+    background:rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    display:grid;
+    gap:12px;
+}
+
+/* cards */
+.card{
+    background: linear-gradient(135deg,#4facfe,#00f2fe);
+    border-radius:14px;
+    cursor:pointer;
+    aspect-ratio:1/1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition: transform .25s, box-shadow .25s;
+    box-shadow:0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* hover pop */
+.card:hover{
+    transform: translateY(-4px) scale(1.03);
+    box-shadow:0 10px 20px rgba(0,0,0,0.35);
+}
+
+/* image inside */
+.card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:14px;
+}
+
+/* timer */
+#timer{
+    font-size:22px;
+    font-weight:bold;
+    color:#fff;
+    margin-top:10px;
+}
+
+/* buttons */
+button{
+    background: linear-gradient(135deg,#ff6a00,#ffcc00);
+    border:none;
+    padding:10px 18px;
+    margin:8px;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    color:#222;
+    box-shadow:0 4px 10px rgba(0,0,0,0.25);
+    transition:.2s;
+}
+
+button:hover{
+    transform:scale(1.05);
 }

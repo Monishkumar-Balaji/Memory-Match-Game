@@ -1,36 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pairing Game</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
-    <header></header>
-    <main >
-        <div class="choose-difficulty">
-            <label>Choose difficulty</label><br>
-            <form onsubmit="loadBoxes(event)">
-                <input type="radio" name="difficulty" value="2"><label>Easy</label>
-                <br>
-                <input type="radio" name="difficulty" value="4"><label>Medium</label>
-                <br>
-                <input type="radio" name="difficulty" value="6"><label>Hard</label>
-                <br>
-                <button type="submit">Start Game</button>
-            </form>
-        </div>
-        <div class="outer-box">
-            <div class="box">
 
-            </div>
-        </div>
-    </main>
-    <script src="script.js"></script>
+<h2>Memory Pair Game</h2>
+
+<center>
+<div class="controls">
+    <form id="startForm">
+        <label>Select Level:</label><br>
+        <input type="radio" name="level" value="2"> Easy  
+        <input type="radio" name="level" value="4"> Medium  
+        <input type="radio" name="level" value="6"> Hard  
+        <br><br>
+        <button type="submit">Start Game</button>
+        <button type="button" onclick="restartGame()">Restart</button>
+    </form>
+</div>
+</center>
+
+<h3 id="timer">Time: 0</h3>
+
+<div class="board" id="board"></div>
+
+<script src="script.js"></script>
 </body>
-<!-- <script>
-    loadBoxes(20);
-</script> -->
 </html>
